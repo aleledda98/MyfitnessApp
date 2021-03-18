@@ -84,13 +84,19 @@ FILE* ApriFile(char f[], char permesso[])
 }
 
 
+
 void ViewLista(struct vaccino *p)
 {
+    int cont=0;
+    
     printf("\n\nContenuto della lista: ");
     while(p!=NULL)
     {
         if(p->num >90)
-            printf("%s", p->s);
+            cont++;
+        
         p=p->next;
     }
+    printf("Numero vaccini >90: %d", cont);
 }
+
