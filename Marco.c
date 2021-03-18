@@ -28,44 +28,6 @@ int main()
     return 0;
 }
 
-/*struct Vaccino *CreaLista()
-{
-    struct Vaccino *p, *pNext;
-    int n, i=0;
-    
-    printf("Quanti elementi vuoi inserire? ");
-    scanf("%d", &n);
-    //Conrollo elementi
-    if(n<1)
-        p=NULL;
-    else
-    {
-        //Allocazione dinamica
-        p = (struct vaccino*) malloc(sizeof(struct vaccino));
-        
-        printf("\nInserisci valore affida: ");
-        scanf("%d", &p->num);
-        
-        pNext=p;
-        
-        //Inserisco gli altri elementi della lista
-        for(i=2; i<=n; i++)
-        {
-            //Sto concatenando gli elementi
-            pNext -> next = (struct lista*) malloc(sizeof(struct lista));
-            pNext= pNext -> next;
-            //Inserisco il nuovo elemento
-            printf("Inserisci il nuovo elemento: ");
-            scanf("%d", &pNext -> num);
-        }
-        //Faccio in modo che l'ultimo elemento punti a NULL
-        pNext->next = NULL;
-    }
-    
-    return p;
-}*/
-
-
 /*Leggo tutti gli interi presenti nel file .txt e li metto nella struttura vaccino**/
 struct vaccino *LetturaFile(FILE *file, char path[], char permesso[])
 {
