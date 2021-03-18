@@ -48,10 +48,12 @@ struct vaccino *LetturaFile(FILE *file, char path[], char permesso[])
            printf( " %s\n", token ); //printing each token
            token = strtok(NULL, " ");
             
+            
+            p = (struct vaccino*) malloc(sizeof(struct vaccino));
+            
             //Inserisco nella lista
             if(cont%2==0) //Pari quindi affidabilita
             {
-                p = (struct vaccino*) malloc(sizeof(struct vaccino));
                 p->num = token;
                 pNext=p;
             }
